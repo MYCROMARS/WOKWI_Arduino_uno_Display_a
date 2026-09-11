@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -79.8, "left": 252.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -76.2, "left": -67.8, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 185.54,
+      "left": 259.43,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "bb1:bn.1", "black", [ "v28.7", "h184.7" ] ],
+    [ "uno:5V", "bb1:bp.1", "red", [ "v38.3", "h186.2", "v-47.1" ] ],
+    [ "oled1:GND", "bb1:bn.2", "black", [ "v0" ] ],
+    [ "oled1:VCC", "bb1:bp.3", "red", [ "v0" ] ],
+    [ "oled1:SCL", "bb1:5b.j", "blue", [ "v-57.6", "h0.3" ] ],
+    [ "bb1:5b.f", "uno:A5", "blue", [ "v-9.6", "h-76.8", "v96", "h-52.3" ] ],
+    [ "oled1:SDA", "bb1:6b.j", "green", [ "v0" ] ],
+    [ "bb1:6b.f", "uno:A4", "green", [ "v-19.2", "h-96", "v115.2", "h-52.2" ] ]
+  ],
+  "dependencies": {}
+}
