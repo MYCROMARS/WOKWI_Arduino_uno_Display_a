@@ -6,7 +6,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#include <Fonts/FreeMono12pt7b.h>
+#include <Fonts/FreeSansOblique9pt7b.h>
 #include <Fonts/FreeSansBold9pt7b.h>
 
 #define OLED_RESET -1 
@@ -43,14 +43,14 @@ void setup() {
   oled.clearDisplay();
 
   // Output: Text
-  oled.setTextSize(1.5);
-  //oled.setFont(&FreeMono12pt7b);
+  oled.setTextSize(1);
+  oled.setFont(&FreeSansOblique9pt7b);
   oled.setTextColor(WHITE);
 
   oled.getTextBounds("HELLO", 0, 0, &x, &y, &w, &h);
   hori = (SCREEN_WIDTH - w)/2;
   
-  oled.setCursor(hori, 10);
+  oled.setCursor(hori, 18);
   //oled.setTextWrap(true);
   oled.println("HELLO");
   oled.display();
@@ -65,7 +65,7 @@ void setup() {
   hori = (SCREEN_WIDTH - w)/2;
   verti = (SCREEN_HEIGHT - h)/2;
   
-  oled.setCursor(hori, verti+15);
+  oled.setCursor(hori, verti+20);
   //oled.setTextWrap(true);
   oled.println("MYCROMARS");
   oled.display();
